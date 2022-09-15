@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3 - 계층(부모/자식 및 조상/후손) 선택자</title>
+    <style>
+        .menu a {display: block; line-height: 50px;}/*띄어쓰기가 후손이라는뜻, 조상-후손 : 조상 후손 선택자 - 조상 요소의 안에 있는 모든 후손*/
+        .menu > a { width: 100px;color:#2c8 ;}/* 부모 > 자식 : 부모 자식 선택자 - 부모의 바로 밑에 있는 '자식' 요소를 선택*/
+        .list{list-style: none;}
+        .list li{float: left;width: 120px; height: 50px; background-color: deepskyblue;}
+        .list li:first-child{border-radius: 20px 0px 0px 20px;}/*첫째, border-radius : 모서리를 둥글게*/
+        .list li:last-child{border-radius: 0px 20px 20px 0px;}/*막내*/
+        .list li:nth-child(2n+1){background-color: orange;}/*순서선택자 2n: 짝수번째만*/
+        .list li:nth-child(3){background-color: deeppink;}/*3: 3번째것만*/
+        .list ~ a {clear: both;background-color: gold;}/*~ : 형제*/
+        .list + a {background-color: navy; color: #fff;}/*바로 밑에 동생 하나*/
+    </style>
+</head>
+<body>
+    <nav class="menu"><!--nav.menu>ul>li*8>a{메뉴$}-->
+        <ul class="list"><!--자식-->
+            <li><a href="">메뉴1</a></li><!--후손-->
+            <li><a href="">메뉴2</a></li>
+            <li><a href="">메뉴3</a></li>
+            <li><a href="">메뉴4</a></li>
+            <li><a href="">메뉴5</a></li>
+            <li><a href="">메뉴6</a></li>
+            <li><a href="">메뉴7</a></li>
+            <li><a href="">메뉴8</a></li>
+        </ul>
+        <a href="">상단1</a><!--a{상단$}*4--><!--자식-->
+        <a href="">상단2</a>
+        <a href="">상단3</a>
+        <a href="">상단4</a>
+    </nav>
+</body>
+</html>
