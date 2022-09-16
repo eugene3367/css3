@@ -10,12 +10,13 @@
         .menu > a { width: 100px;color:#2c8 ;}/* 부모 > 자식 : 부모 자식 선택자 - 부모의 바로 밑에 있는 '자식' 요소를 선택*/
         .list{list-style: none;}
         .list li{float: left;width: 120px; height: 50px; background-color: deepskyblue;}
+        /*순서 위치 선택자*/
         .list li:first-child{border-radius: 20px 0px 0px 20px;}/*첫째, border-radius : 모서리를 둥글게*/
         .list li:last-child{border-radius: 0px 20px 20px 0px;}/*막내*/
-        .list li:nth-child(2n+1){background-color: orange;}/*순서선택자 2n: 짝수번째만*/
+        .list li:nth-child(2n+1){background-color: orange;}/*순서선택자 2n+1: 홀수번째만 2n: 짝수번째만*/
         .list li:nth-child(3){background-color: deeppink;}/*3: 3번째것만*/
-        .list ~ a {clear: both;background-color: gold;}/*~ : 형제*/
-        .list + a {background-color: navy; color: #fff;}/*바로 밑에 동생 하나*/
+        .list ~ a {clear: both;background-color: gold;}/*~ : 형제, .형 ~ 아우들*/
+        .list + a {background-color: navy; color: #fff;}/*바로 밑에 동생 하나, .형 ~ 아우*/
     </style>
 </head>
 <body>
@@ -34,6 +35,8 @@
         <a href="">상단2</a>
         <a href="">상단3</a>
         <a href="">상단4</a>
+        <span>내용1</span>
+        <span>내용2</span>
     </nav>
 </body>
 </html>
