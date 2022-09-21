@@ -1,0 +1,6 @@
+/*fonts.css*/
+@charset "UTF-8;"
+@font-face{
+    font-family: "ntg";
+    src:local("※"),url("./noto/noto-sans-kr.eot?#iefix") format('embeded-opentype'),url("./noto/noto-sans-kr.woff2") format('woff2'),url("./noto/noto-sans-kr.woff") format('woff'),
+}
